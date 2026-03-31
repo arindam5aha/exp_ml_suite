@@ -1,4 +1,4 @@
-# Code Samples: Data Utilities, Neural Network Blocks, and MOT Interface
+# Code Samples: Data Utilities, Neural Network Blocks, and Hardware-Software Interface
 
 This repository contains reusable Python components extracted from a larger machine-learning and laboratory-control workflow:
 
@@ -15,8 +15,6 @@ This repository contains reusable Python components extracted from a larger mach
 5. [Quick Start](#quick-start)
 6. [Module Reference](#module-reference)
 7. [Data Formats](#data-formats)
-8. [Known Constraints and Platform Notes](#known-constraints-and-platform-notes)
-9. [Development Notes](#development-notes)
 
 ## Repository Layout
 
