@@ -9,7 +9,6 @@ Key Features:
     - Symmetric handshake protocol with sync markers
     - Thread-safe peer connection management
     - Cooperative thread termination via halt events
-    - Backward compatibility aliases for deprecated class names
 
 Typical Usage:
     Server side: receiver = Receiver('127.0.0.1', 9999)
@@ -121,9 +120,6 @@ class SocketWrapper:
         self.sock.send(data)
 
 
-# Backward compatibility alias
-TCPSocket = SocketWrapper
-
 
 class PeerConnection:
     """Single framed-message TCP connection with length-prefixed protocol.
@@ -211,10 +207,6 @@ class PeerConnection:
 
         encoded = self._fetch_bytes(msg_len)
         return encoded.decode("utf-8")
-
-
-# Backward compatibility alias
-Connection = PeerConnection
 
 
 class Receiver:
