@@ -647,13 +647,6 @@ class RBMLInterface(QThread):
         if plot:
             self.plot_ch.emit(self.run_from_file, False)
 
-    # def reset(self, push=False, flag=False):
-    #     if self.run_from_file is None:
-    #         self.open_file(self.default_run_path)
-    #     if push:    
-    #         self.push_lv_run(data_dict=self.run_from_file, plot_digital=False, flag=flag)
-
-
     def clear_lv_buffer(self, flag=False):
         """Drain pending items from LV server read buffer."""
         count = 0
