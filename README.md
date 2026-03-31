@@ -275,7 +275,7 @@ The communication thread dispatches actions based on string flags such as:
 - `<jeitgem>`
 - `<stop>`
 
-### `tcp_server.py`
+### `remote_interface.py`
 
 ### `class Receiver(host, port)`
 
