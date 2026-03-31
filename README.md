@@ -22,10 +22,10 @@ This repository contains reusable Python components extracted from a larger mach
 
 ```text
 .
-|- data_handling.py   # Data wrappers, transforms, torch/NumPy conversion, HDF5 save/load
-|- nn_classes.py      # MLP and GaussianMLP model definitions + initialization utilities
-|- mot_interface.py   # QThread interface between GUI/run control and ML process
-|- tcp_server.py      # Length-prefixed TCP messaging layer for distributed communication
+|- data_handling.py      # Data wrappers, transforms, torch/NumPy conversion, HDF5 save/load
+|- nn_classes.py       # MLP and GaussianMLP model definitions + initialization utilities
+|- mot_interface.py    # QThread interface between GUI/run control and ML process
+|- remote_interface.py # Length-prefixed TCP messaging layer for distributed communication
 `- README.md
 ```
 
@@ -61,7 +61,7 @@ Provides:
 
 Typical use case: online optimization/control loop where experimental runs are configured by ML outputs and observations/rewards are returned to the model.
 
-### `tcp_server.py`
+### `remote_interface.py`
 
 Provides:
 

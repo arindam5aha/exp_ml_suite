@@ -26,7 +26,7 @@ import signal
 from threading import Thread, Event
 from queue import Queue
 from pueye_cam import ueye_cam_interface
-from tcp_server import Receiver
+from remote_interface import Receiver
 
 
 class RBMLInterface(QThread):

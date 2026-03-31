@@ -16,7 +16,7 @@ import logging
 import random
 import bz2
 from datetime import datetime
-from tcp_server import Receiver
+from remote_interface import Receiver
 
 # FLAGS are sent before sending/ recieveing data for the flagged operation
 # Flags Sent        Desc.
