@@ -277,18 +277,6 @@ class RunBuilderInterface(BaseInterface):
         od = (detune**2 + x)/x
         od *= np.log(run_trace/ref_trace)
         return -od
-    
-    # def get_absorption(self):
-    #     self.flag('clr')
-    #     self.flag('drop')
-    #     self.flag('acq', 5)
-    #     ref_trace = self.json_read()
-    #     self.flag('reset')
-    #     time.sleep(5)
-    #     self.flag('acq', 5)
-    #     run_trace = self.json_read()
-    #     print(run_trace, ref_trace)
-    #     return run_trace, ref_trace
 
     def reset(self, soft_reset=False, exe=True):
         """Generate random in-bound parameters and optionally execute them.
