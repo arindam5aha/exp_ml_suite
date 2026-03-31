@@ -29,6 +29,9 @@ from pueye_cam import ueye_cam_interface
 from remote_interface import Receiver
 
 
+REMOTE_HOST = '127.0.0.1'
+
+
 class RBMLInterface(QThread):
     """Threaded interface between RunBuilder/LV control and ML components.
 
@@ -141,13 +144,13 @@ class RBMLInterface(QThread):
         print('>>> LV job done')
         self._job_done = False
         
-    def start_server(self):   # local ip = '169.254.74.70'
+    def start_server(self):
         """Start main ML listener and optional lock-check listener."""
         # create a server for ML purpose
-        self.server = Receiver('169.254.74.70', 4444)
+        self.server = Receiver(REMOTE_HOST, 4444)
         self.server.start_server()
         if self.check_locks:
-            self.tr_serv = Receiver('169.254.74.70', 3333) # all lock
+            self.tr_serv = Receiver(REMOTE_HOST, 3333) # all lock
             self.tr_serv.start_server()
 
         # start the comm cycle
