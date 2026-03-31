@@ -340,26 +340,7 @@ Example dataset keys:
 
 `mot_interface.py` stores runtime logs/data in bz2-compressed pickle format.
 
-## Known Constraints and Platform Notes
-
-- `start_ml` currently launches with `gnome-terminal`, which is Linux-specific.
-- The interface assumes external run files and channel schemas compatible with the surrounding RunBuilder/LabVIEW ecosystem.
-- Camera-dependent methods require compatible hardware and a working `pueye_cam` integration.
-- Lock-check workflow assumes a second TCP listener/service is available.
-
-## Development Notes
-
-- The repository is organized as code samples and building blocks rather than a packaged library.
-- For production use, consider adding:
-	- Unit tests for `data_wrapper`, transform inversion, and `nn_classes` output contracts.
-	- Type hints on public methods in `mot_interface.py`.
-	- Platform-agnostic process launching for ML subprocess startup.
-	- A `requirements.txt` or `pyproject.toml` for reproducible environments.
-
----
-
 Author metadata embedded in source files:
-
 - Arindam Saha, ANU (2025)
 - GitHub: `arindam5aha`
 
